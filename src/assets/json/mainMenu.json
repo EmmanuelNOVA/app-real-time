@@ -18,7 +18,7 @@
     },
     {
         "title":"Cerrar Sesión",
-        "icon": "fa-sign-out",
+        "icon": "fa-sign-out-alt",
         "color": "text-gray-400"
     }
 ]

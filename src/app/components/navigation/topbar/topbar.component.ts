@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'navigation-topbar',
@@ -8,8 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class TopbarComponent implements OnInit {
 
   constructor() { }
-
+  //Declaration Variables
+  @Input() menuItems:any[] = [];
   ngOnInit(): void {
+    
   }
 
 }
