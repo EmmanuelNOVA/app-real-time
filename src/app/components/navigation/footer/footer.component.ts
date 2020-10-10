@@ -11,8 +11,8 @@ export class FooterComponent implements OnInit {
   //varible Declarations
   @Input() empresa: string;
   @Input() anio: number;
-  
-  
+  @Input() isBold: boolean = true;
+
   ngOnInit(): void {
   }
 

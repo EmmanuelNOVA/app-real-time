@@ -17,6 +17,10 @@
 			
 			<!--Begin Page Content -->
 			<div class="container-fluid">
+				<pre>
+					{{menuItems | json}}
+				</pre>
+				
 			</div>
 			<!--/begin Page Content -->
 
@@ -25,8 +29,9 @@
 
 		<!-- Footer -->
 		<navigation-footer
-			empresa="Group Nova S.A. de C.V."
-			anio=2020>
+			[empresa]="miEmpresa"
+			[anio]="periodo"
+			[isBold]="true">
 
 		</navigation-footer>
 		<!-- /footer -->
