@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'navigation-footer',
@@ -8,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class FooterComponent implements OnInit {
 
   constructor() { }
-
+  //varible Declarations
+  @Input() empresa: string;
+  @Input() anio: number;
+  
+  
   ngOnInit(): void {
   }
 
