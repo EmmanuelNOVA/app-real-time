@@ -13,7 +13,8 @@
 		
 			<!--Topbar -->
 			<navigation-topbar
-				[menuItems]="menuItems">
+				[menuProfileItems]="menuItems"
+				(onClickMenu)="listenChildMenuEvent($event)">
 			</navigation-topbar>
 			<!-- /topbar -->
 			

@@ -172,14 +172,11 @@
 			</a>
 			<!-- Dropdown - User Information -->
 			<div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-				
-				<div *ngFor="let item of menuItems">
-					<a class="dropdown-item" href="#">
-						<i class='fas {{item.icon}} fa-sm fa-fw mr-2 {{item.color}}'></i>
-						{{item.title}}
-					</a>
-				</div>
-				
+				<a class="dropdown-item" href="javascript:void(0)" *ngFor="let item of menuProfileItems; let i=index" 
+					(click)="onclick_menu(i, item)">
+					<i class='fas {{item.icon}} fa-sm fa-fw mr-2 {{item.color}}'></i>
+					{{item.title}}
+				</a>			
 			</div>
 		</li>
 
