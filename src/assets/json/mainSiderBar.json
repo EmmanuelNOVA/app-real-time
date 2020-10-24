@@ -1,0 +1,119 @@
+[
+    {
+        "id": 1,
+        "section": "",
+        "title":"Dashboard",
+        "icon": "fa-tachometer-alt",
+        "submenu": false
+    },
+    {
+        "id": "collapseComponents",
+        "section": "Interface",
+        "title":"Components",
+        "icon": "fa-cog",
+        "submenu": true,
+        "collapseItem": [
+            {
+                "title":"Custom Components",
+                "items":[
+                    {
+                        "id":2,
+                        "title":"Buttons",
+                        "icon":""
+                    },
+                    {
+                        "id":3,
+                        "title":"Cards",
+                        "icon":""
+                    }
+                ]
+            }
+        ]   
+    },
+    {
+        "id": "collapseUtilities",
+        "title":"Utilities",
+        "icon": "fa-wrench",
+        "submenu": true,
+        "collapseItem": [
+            {
+                "title":"Custom Utilities",
+                "items":[
+                    {
+                        "id":4,
+                        "title":"Colors"
+                    },
+                    {
+                        "id":5,
+                        "title":"Borders"
+                    },
+                    {
+                        "id":6,
+                        "title":"Animations"
+                    },
+                    {
+                        "id":7,
+                        "title":"Other"   
+                    }
+                ]
+            }
+        ]
+        
+    },
+    {
+        "id": "collapsePages",
+        "title":"Pages",
+        "icon": "fa-folder",
+        "submenu": true,
+        "collapseItem": [
+            {
+                "title":"Login Screens:",
+                "items":[
+                    {
+                        "id":8,
+                        "title":"Login"
+                    },
+                    {
+                        "id":9,
+                        "title":"Register"
+                    },
+                    {
+                        "id":10, 
+                        "title":"Forgot Password"
+                    },
+                    {
+                        "id":11,
+                        "title":"Other"   
+                    }
+                ]
+            },
+            {
+                "title":"Other Pages:",
+                "items":[
+                    {
+                        "id":12,
+                        "title":"404 Page"
+                    },
+                    {
+                        "id":13,
+                        "title":"Blank Page"
+                    }
+                ]
+
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "title":"Charts",
+        "icon": "fa-chart-area",
+        "submenu": false
+       
+    },
+    {
+        "id": 15,
+        "title":"Tables",
+        "icon": "fa-table",
+        "submenu": false
+    }
+]

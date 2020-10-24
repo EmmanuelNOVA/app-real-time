@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MainTopBarMenuService } from './services/core/main/main-top-bar-menu.service';
+import { MainSideBarMenuService } from './services/core/main/main-side-bar-menu.service';
 
 declare var App: any;
 
@@ -10,7 +11,7 @@ declare var App: any;
 })
 export class AppComponent implements OnInit {
 
-	constructor(private menuSvc: MainTopBarMenuService){
+	constructor(private menuSvc: MainTopBarMenuService, private menuSideBarSvc: MainSideBarMenuService ){
 
 	}
 
@@ -19,6 +20,7 @@ export class AppComponent implements OnInit {
 	periodo: number = 2020;
 
 	menuItems:any[] = [];
+	menuSideBarItems:any[] = [];
 
 	ngOnInit() {
 		//Load Sidebar
@@ -32,13 +34,22 @@ export class AppComponent implements OnInit {
 			//Async
 			this.menuItems = data;
 		});
+
+		this.menuSideBarSvc.getItemsSideBarMenu().subscribe((data: any)=>{
+			this.menuSideBarItems = data;
+		})
 	}
 
 	listenChildMenuEvent(eventArgs:any){
 		console.log('Los datos emitidos por el componente hijo son :',eventArgs);
 		console.log('El indice seleccionado en el padre es ', eventArgs.index);
 		console.log('El item seleccionado en el padre es: ',eventArgs.name);
+	}
 
+	listenChildSideBarEvent(eventArgs:any){
+		console.log('Los datos emitidos por el componente hijo son :',eventArgs);
+		console.log('El indice seleccionado en el padre es ', eventArgs.index);
+		console.log('El item seleccionado en el padre es: ',eventArgs.name);
 	}
 
 

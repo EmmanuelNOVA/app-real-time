@@ -2,7 +2,13 @@
 <div id="wrapper">
 
 	<!-- Sidebar -->
-	<navigation-sidebar></navigation-sidebar>
+	<navigation-sidebar
+		titleMenu="MTWDM"
+		subtitleMenu='101'
+		mainIconMenu="fa-clock"
+		[menuSideBarItems]="menuSideBarItems"
+		(onClickSiderBarMenu)="listenChildSideBarEvent($event)">
+	</navigation-sidebar>
 	<!-- /sidebar -->
 	
 	 <!-- Content Wrapper -->
