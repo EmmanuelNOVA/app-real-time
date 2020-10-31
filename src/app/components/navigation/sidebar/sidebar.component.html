@@ -12,7 +12,14 @@
 	<hr class="sidebar-divider my-0">
 	
 	<!-- custom nav item - Pages Collapse Menu-->
-	<li class="nav-item" *ngFor="let item of menuSideBarItems; let i = index">
+	<li class="nav-item" *ngFor="let item of menuSideBarItems; let i = index; let last = last">
+
+		<!-- Divider -->
+		<hr *ngIf="item.isInit" class="sidebar-divider">
+		<div *ngIf="item.section.length > 0 && item.isInit" class="sidebar-heading">
+			{{item.section}}
+		</div>
+
 
 		<a *ngIf="item.items.length == 0" class="nav-link" href="javascript:void(0)"
 		(click)="onclick_sidebar(item)">
@@ -20,10 +27,7 @@
 			<span>{{item.title}}</span>
 		</a>
 
-		<div *ngIf="item.section.length > 0"class="sidebar-heading">
-			{{item.section}}
-		</div>
-
+		
 		<a *ngIf="item.items.length > 0"  class="nav-link collapsed" href="javascript:void(0)" data-toggle="collapse" attr.data-target="#collapse{{i}}" aria-expanded="true">
 			<i class="fas fa-fw {{item.icon}}"></i>
 			<span>{{item.title}}</span>
@@ -33,13 +37,12 @@
 			
 			<div *ngFor="let subitem of item.items" class="bg-white py-2 collapse-inner rounded">
 			  <h6 class="collapse-header">{{subitem.subTitle}}</h6>
-			  <a *ngFor="let child of subitem.subItems" class="collapse-item" href="buttons.html">{{child.title}}</a>
+			  <a *ngFor="let child of subitem.subItems" class="collapse-item" [routerLink]="child.route" routerLinkActive="active" >{{child.title}}</a>
 			</div>
 
 		</div>
 
-		<!-- Divider -->
-		<hr class="sidebar-divider">
+		
 
 	</li>
 	<!-- /custom nav item - Pages Collapse Menu-->

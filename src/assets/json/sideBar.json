@@ -3,8 +3,9 @@
         "section": "",
         "title": "Dashboard",
         "icon": "fa-tachometer-alt",
+        "route": [],
         "items":[],
-        "isCollapsed": false
+        "isInit":true 
     },
     {
         "section":"Interface",
@@ -17,21 +18,38 @@
                     {
                         "title": "Buttons",
                         "icon": "",
-                        "route":""
+                        "route":["components/buttons"]
                     },
                     {
                         "title": "Cards",
                         "icon": "",
-                        "route":""
+                        "route":["components/cards"]
+                    }        
+                ]
+            },
+            {
+                "subTitle": "Facturas",
+                "subItems":[
+                    {
+                        "title": "Búsqueda",
+                        "icon": "",
+                        "route":["components/busqueda"]
+                    },
+                    {
+                        "title": "Cancelación",
+                        "icon": "",
+                        "route":["components/cancelacion"]
                     }        
                 ]
             }
-        ]  
+
+        ],
+        "isInit":true 
     },
     {
         "section":"Interfaces",
-        "title": "Utilities",
-        "icon": "fa-wrench",
+        "title": "Login",
+        "icon": "fa-user",
         "items":[
             {
                 "subTitle": "Custom Utilities",
@@ -58,7 +76,8 @@
                     }
                 ]
             }
-        ]  
+        ] ,
+        "isInit":false
     },
     {
         "section":"ADDONS",
@@ -69,43 +88,58 @@
                 "subTitle": "Login Screens:",
                 "subItems":[
                     {
-                        "id":8,
                         "title":"Login",
                         "icon": "",
                         "route":""
                     },
                     {
-                        "id":9,
                         "title":"Register",
                         "icon": "",
                         "route":""
                     },
                     {
-                        "id":10, 
+
                         "title":"Forgot Password",
                         "icon": "",
                         "route":""
                     },
                     {
-                        "id":11,
                         "title":"Other",
-                         "icon": "",
+                        "icon": "",
+                        "route":"" 
+                    }
+                ]
+            },
+            {
+                "subTitle":"Other Pages:",
+                "subItems":[
+                    {
+                        "title":"404 Page",
+                        "icon": "",
+                        "route":"" 
+                    },
+                    {
+                        "title":"Blank Page",
+                        "icon": "",
                         "route":"" 
                     }
                 ]
             }
-        ]  
+        ] ,
+        "isInit":true 
     },
     {
         "section":"ADDONS",
         "title": "Charts",
         "icon": "fa-chart-area",
-        "items":[]
+        "items":[],
+        "isInit":false
     },
     {
         "section":"ADDONS",
         "title": "Tables",
         "icon": "fa-table",
-        "items":[]
+        "items":[],
+        "isInit":false
     }
 ]
