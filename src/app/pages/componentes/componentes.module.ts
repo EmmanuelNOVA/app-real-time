@@ -6,6 +6,7 @@ import { TarjetasComponent } from './tarjetas/tarjetas.component';
 import { BusquedaComponent } from './busqueda/busqueda.component';
 import { CancelacionComponent } from './cancelacion/cancelacion.component';
 import { ComponentesRoutesModule } from './componentes.routes';
+import { PaisesComponent } from './paises/paises.component';
 
 
 
@@ -15,7 +16,7 @@ import { ComponentesRoutesModule } from './componentes.routes';
     BotonesComponent, 
     TarjetasComponent, 
     BusquedaComponent, 
-    CancelacionComponent
+    CancelacionComponent, PaisesComponent
   ],
   imports: [
     CommonModule,

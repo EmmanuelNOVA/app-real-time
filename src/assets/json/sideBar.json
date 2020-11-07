@@ -8,6 +8,14 @@
         "isInit":true 
     },
     {
+        "section": "",
+        "title": "Paises",
+        "icon": "fa-flag-usa",
+        "route": ["components/paises"],
+        "items":[],
+        "isInit":true 
+    },
+    {
         "section":"Interface",
         "title": "Components",
         "icon": "fa-cog",

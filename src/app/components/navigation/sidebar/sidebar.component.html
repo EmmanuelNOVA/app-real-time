@@ -21,8 +21,7 @@
 		</div>
 
 
-		<a *ngIf="item.items.length == 0" class="nav-link" href="javascript:void(0)"
-		(click)="onclick_sidebar(item)">
+		<a *ngIf="item.items.length == 0" class="nav-link" [routerLink]="item.route" routerLinkActive="active">
 			<i class="fas fa-fw {{item.icon}}"></i>
 			<span>{{item.title}}</span>
 		</a>
