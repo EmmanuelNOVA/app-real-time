@@ -21,6 +21,12 @@ export class PaisesService {
   getPaisesByName(name: string){
     return this.http.get(`${ENDPOINT}name/${name}`);
   }
+  /**
+   * Get all Countries
+   */
+  getAllPaises(){
+    return this.http.get(`${ENDPOINT}all`);
+  }
 
 
   

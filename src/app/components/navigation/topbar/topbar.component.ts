@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { SearchService } from 'src/app/services/core/search.service';
 
 @Component({
 	selector: 'navigation-topbar',
@@ -11,7 +12,7 @@ export class TopbarComponent implements OnInit {
 	@Input() menuProfileItems: any[] = [];
 	@Output() onClickMenu: EventEmitter<any> = new EventEmitter();
 
-	constructor() { }
+	constructor(private searchSvc: SearchService) { }
 
 	ngOnInit(): void {
 
@@ -24,4 +25,8 @@ export class TopbarComponent implements OnInit {
 		});
 	}
 
+	onclick_search(criterio: string){
+		console.log(`El criterio publicado es: ${criterio}`);
+		this.searchSvc.sendCriterio(criterio);
+	}
 }

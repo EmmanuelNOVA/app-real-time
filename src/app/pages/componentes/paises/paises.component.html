@@ -1,17 +1,14 @@
-<div class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-    <div class="input-group">
-        <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search"
-            aria-describedby="basic-addon2" #textCriterio>
-        <div class="input-group-append">
-            <button class="btn btn-primary" type="button" (click)="searchCriterio(textCriterio.value)">
-                <i class="fas fa-search fa-sm"></i>
-            </button>
-        </div>
+<div class="row">
+    <div class="col-md-12">
+        <ng-select [items]="defaultBindingsList"
+            (change)="onChangeRegion()"
+            [clearable] = false
+           [(ngModel)]="selectedRegion">
+        </ng-select>
     </div>
 </div>
 <hr>
-
-<div class="row">
+<div class="row" >
     <div class="col-md-4 py-2" *ngFor="let item of paisesList">
         <div class="card">
             <img class="card-img-top" width="300" height="300" [src]="item.flag" alt="Card image cap">
